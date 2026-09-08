@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room for Thoughts Mental Health Counseling | Therapy in Westchester, NY</title>
+<meta name="description" content="Room for Thoughts Mental Health Counseling provides compassionate therapy for teens, young adults, and women in Westchester, NY, specializing in anxiety, trauma, EMDR, and life transitions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#F7F4EF;
+    --ivory-deep:#EFEBE5;
+    --sage:#858C78;
+    --sage-deep:#68705F;
+    --rose:#B99A8B;
+    --terracotta:#B99A8B;
+    --terracotta-deep:#9D8376;
+    --taupe:#A89A8D;
+    --charcoal:#333331;
+    --charcoal-soft:#625C56;
+    --logo-accent:#A69287;
+    --logo-leaf:#82826E;
+    --serif:'Fraunces', serif;
+    --sans:'Work Sans', sans-serif;
+    --script:'Mrs Saint Delafield', cursive;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    color:var(--charcoal);
+    background:var(--ivory);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  h1,h2,h3{font-family:var(--serif); font-weight:500; letter-spacing:-0.01em; color:var(--charcoal);}
+  .eyebrow{
+    font-family:var(--sans); text-transform:uppercase; letter-spacing:0.16em;
+    font-size:12px; font-weight:600; color:var(--sage-deep);
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:15px 30px; border-radius:100px;
+    font-family:var(--sans); font-weight:500; font-size:15px;
+    background:var(--terracotta); color:#fff;
+    border:1px solid var(--terracotta);
+    cursor:pointer; transition:all .25s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{background:var(--terracotta-deep); transform:translateY(-1px); box-shadow:0 8px 20px rgba(157,131,118,0.28);}
+  .btn.ghost{background:transparent; color:var(--charcoal); border:1px solid rgba(168,154,141,0.55);}
+  .btn.ghost:hover{border-color:var(--charcoal); background:rgba(48,48,46,0.04); box-shadow:none;}
+  .btn.on-sage{background:var(--charcoal); border-color:var(--charcoal);}
+  .btn.on-sage:hover{background:#1e1e1c;}
+
+  /* ---------- Wordmark (logo lockup) ---------- */
+  .leaf-sprig{display:inline-block; vertical-align:middle; color:var(--logo-leaf);}
+  .wordmark{display:flex; flex-direction:column; align-items:center; text-align:center;}
+  .wordmark .word-line{font-family:var(--serif); font-weight:600; text-transform:uppercase; letter-spacing:0.03em; color:var(--charcoal); line-height:1; font-size:26px;}
+  .wordmark .script{font-family:var(--script); text-transform:none; color:var(--logo-accent); font-weight:400; letter-spacing:0; position:relative; top:0.08em; font-size:28px;}
+  .wordmark .divider{display:flex; align-items:center; gap:10px; margin:14px 0 10px;}
+  .wordmark .divider .rule{height:1px; width:38px; background:rgba(168,154,141,0.6);}
+  .wordmark .sub{font-family:var(--sans); font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:var(--charcoal-soft);}
+  .wordmark.on-dark .word-line{color:var(--ivory);}
+  .wordmark.on-dark .sub{color:rgba(248,245,240,0.65);}
+  .wordmark.on-dark .divider .rule{background:rgba(248,245,240,0.3);}
+  .wordmark.on-dark .leaf-sprig{color:var(--sage);}
+  .wordmark.lg .word-line{font-size:46px;}
+  .wordmark.lg .script{font-size:44px;}
+  .wordmark.sm .word-line{font-size:19px;}
+  .wordmark.sm .script{font-size:20px;}
+  .wordmark.sm .sub{font-size:9px; letter-spacing:0.16em;}
+  .wordmark.sm .divider{margin:5px 0 0;}
+  .wordmark.sm .divider .rule{width:16px;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(248,245,240,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(168,154,141,0.35);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 32px;}
+  .brand{display:flex; flex-direction:column; line-height:1.1;}
+  .brand .name{font-family:var(--serif); font-size:22px; font-weight:600; letter-spacing:0.01em;}
+  .brand .tag{font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--charcoal-soft); margin-top:3px;}
+  .nav-links{display:flex; align-items:center; gap:36px;}
+  .nav-links a{font-size:15px; font-weight:500; color:var(--charcoal-soft); transition:color .2s;}
+  .nav-links a:hover{color:var(--sage-deep);}
+  .nav-cta{display:flex; align-items:center; gap:28px;}
+  .menu-toggle{display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px;}
+  .menu-toggle span{width:24px; height:2px; background:var(--charcoal);}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:88px 0 100px;}
+  .hero .wrap{display:grid; grid-template-columns:1.05fr 0.95fr; gap:64px; align-items:center;}
+  .hero-eyebrow{margin-bottom:22px;}
+  .hero h1{font-size:52px; line-height:1.06; margin-bottom:22px;}
+  .hero h1 em{font-style:italic; color:var(--terracotta); font-weight:500;}
+  .hero p.lede{font-size:19px; color:var(--charcoal-soft); max-width:460px; margin-bottom:34px;}
+  .hero .fine{margin-top:22px; font-size:14px; color:var(--charcoal-soft);}
+  .hero .fine::before{content:"— "; }
+  .hero-photo{
+    position:relative; aspect-ratio:4/5; border-radius:28px;
+    background:linear-gradient(160deg, rgba(185,154,139,0.55) 0%, var(--ivory-deep) 55%, rgba(133,140,120,0.55) 130%);
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+  .photo-placeholder{
+    text-align:center; color:var(--charcoal); opacity:0.55; font-family:var(--serif); font-style:italic; font-size:16px;
+    padding:20px;
+  }
+  .hero-photo::after{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35), transparent 55%);
+  }
+  .hero-blob{
+    position:absolute; width:180px; height:180px; border-radius:50%;
+    background:var(--terracotta); opacity:0.12; filter:blur(2px);
+    bottom:-50px; left:-50px;
+  }
+
+  /* ---------- Reassurance / breathing room section ---------- */
+  .breathe{padding:100px 0; text-align:center;}
+  .breathe .wrap{max-width:680px;}
+  .breathe .maybe-list{margin:36px 0; font-family:var(--serif); font-size:22px; line-height:1.85; color:var(--charcoal-soft);}
+  .breathe .maybe-list span{display:block;}
+  .breathe .maybe-list span em{font-style:italic; color:var(--charcoal);}
+  .breathe .close-line{font-size:19px; max-width:520px; margin:0 auto 36px; color:var(--charcoal-soft);}
+  .breathe .signature{font-family:var(--serif); font-style:italic; font-size:20px; margin-bottom:36px;}
+
+  /* ---------- Who I Help ---------- */
+  .section{padding:100px 0;}
+  .section-head{max-width:600px; margin-bottom:56px;}
+  .section-head h2{font-size:38px; margin-top:14px;}
+  .cards-4{display:grid; grid-template-columns:repeat(4,1fr); gap:24px;}
+  .cards-5{display:grid; grid-template-columns:repeat(5,1fr); gap:20px;}
+  .card{
+    background:#fff; border-radius:20px; padding:34px 26px;
+    border:1px solid rgba(168,154,141,0.3);
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .card:hover{transform:translateY(-6px); box-shadow:0 20px 40px rgba(48,48,46,0.08);}
+  .card .dot{width:44px; height:44px; border-radius:50%; margin-bottom:20px; display:flex; align-items:center; justify-content:center; font-size:18px;}
+  .card:nth-child(1) .dot{background:var(--rose);}
+  .card:nth-child(2) .dot{background:var(--sage);}
+  .card:nth-child(3) .dot{background:var(--terracotta); color:var(--charcoal);}
+  .card:nth-child(4) .dot{background:linear-gradient(135deg, var(--rose), var(--sage-deep));}
+  .card:nth-child(5) .dot{background:var(--charcoal); color:#fff;}
+  .card h3{font-size:18px; margin-bottom:10px; letter-spacing:0.02em;}
+  .card p{font-size:15px; color:var(--charcoal-soft);}
+
+  /* ---------- About / Why ---------- */
+  .about{background:var(--ivory-deep);}
+  .about .wrap{display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px; align-items:center;}
+  .about-photo{
+    position:relative;
+    aspect-ratio:3/4; border-radius:24px;
+    background:linear-gradient(200deg, rgba(133,140,120,0.5) 0%, var(--ivory) 60%, rgba(185,154,139,0.5) 130%);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .about-badge{
+    position:absolute; width:118px; height:118px;
+    bottom:-24px; right:-24px;
+    filter:drop-shadow(0 8px 18px rgba(48,48,46,0.18));
+  }
+  .about-badge circle:first-of-type, .about-badge circle:nth-of-type(2){fill:var(--ivory);}
+  .about h2{font-size:36px; margin:10px 0 20px;}
+  .about .credential{font-size:15px; color:var(--sage-deep); font-weight:600; margin-bottom:22px;}
+  .about p{color:var(--charcoal-soft); margin-bottom:18px; font-size:16px; max-width:520px;}
+  .about .btn{margin-top:14px;}
+
+  /* ---------- EMDR ---------- */
+  .emdr{background:var(--sage); color:var(--charcoal);}
+  .emdr .wrap{max-width:720px; text-align:center;}
+  .emdr .eyebrow{color:var(--charcoal); opacity:0.65;}
+  .emdr h2{font-size:34px; margin:16px 0 30px;}
+  .emdr .lines{font-family:var(--serif); font-size:21px; line-height:1.9; margin-bottom:30px;}
+  .emdr .lines div{opacity:0.85;}
+  .emdr .lines .final{font-weight:600; opacity:1; margin-top:6px;}
+  .emdr p.desc{font-size:16px; max-width:560px; margin:0 auto 34px; opacity:0.85;}
+  .emdr .btn{background:var(--charcoal); border-color:var(--charcoal);}
+  .emdr .btn:hover{background:#1e1e1c; box-shadow:0 8px 20px rgba(0,0,0,0.18);}
+
+  /* ---------- Feels like ---------- */
+  .feels .cards-4 .card{background:var(--ivory); border:none;}
+  .feels .card .glyph{font-size:26px; margin-bottom:16px; display:block;}
+
+  /* ---------- Services ---------- */
+  .services-list{display:flex; flex-direction:column;}
+  .service-row{
+    display:grid; grid-template-columns:220px 1fr; gap:40px;
+    padding:32px 0; border-top:1px solid rgba(168,154,141,0.4);
+    align-items:baseline;
+  }
+  .services-list .service-row:last-child{border-bottom:1px solid rgba(168,154,141,0.4);}
+  .service-row h3{font-size:20px; font-weight:600;}
+  .service-row p{color:var(--charcoal-soft); font-size:15.5px; max-width:560px;}
+
+  /* ---------- What to expect ---------- */
+  .expect{background:var(--ivory-deep);}
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:28px; counter-reset:step;}
+  .step{position:relative; padding-top:8px;}
+  .step .num{font-family:var(--serif); font-size:15px; color:var(--sage-deep); font-weight:600; letter-spacing:0.05em; margin-bottom:14px; display:block;}
+  .step h3{font-size:18px; margin-bottom:10px;}
+  .step p{color:var(--charcoal-soft); font-size:15px;}
+  .step:not(:last-child)::after{
+    content:""; position:absolute; top:6px; right:-14px; width:28px; height:1px; background:rgba(168,154,141,0.5);
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq-list{max-width:760px;}
+  .faq-item{border-bottom:1px solid rgba(168,154,141,0.45);}
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none; cursor:pointer;
+    padding:24px 0; display:flex; justify-content:space-between; align-items:center;
+    font-family:var(--serif); font-size:19px; color:var(--charcoal); gap:20px;
+  }
+  .faq-q .icon{font-size:20px; color:var(--terracotta); transition:transform .25s ease; flex-shrink:0;}
+  .faq-item.open .faq-q .icon{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .3s ease;}
+  .faq-a p{padding-bottom:24px; color:var(--charcoal-soft); font-size:15.5px; max-width:640px;}
+
+  /* ---------- CTA ---------- */
+  .cta-band{background:var(--charcoal); color:var(--ivory); text-align:center; padding:90px 0;}
+  .cta-band .wrap{max-width:640px;}
+  .cta-band h2{color:#fff; font-size:34px; margin-bottom:18px;}
+  .cta-band p{opacity:0.92; margin-bottom:32px; font-size:16.5px;}
+  .cta-band .btn{background:var(--ivory); color:var(--charcoal); border-color:var(--ivory);}
+  .cta-band .btn:hover{background:var(--terracotta); color:#fff; border-color:var(--terracotta); box-shadow:0 8px 24px rgba(0,0,0,0.25);}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--charcoal); color:var(--ivory); padding:64px 0 32px;}
+  .foot-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid rgba(248,245,240,0.15);}
+  footer .brand-name{font-family:var(--serif); font-size:22px; margin-bottom:8px;}
+  footer .muted{color:rgba(248,245,240,0.6); font-size:14.5px; line-height:1.8;}
+  footer h4{font-size:13px; text-transform:uppercase; letter-spacing:0.12em; margin-bottom:16px; color:rgba(248,245,240,0.85);}
+  footer a.flink{display:block; color:rgba(248,245,240,0.7); font-size:14.5px; margin-bottom:10px; transition:color .2s;}
+  footer a.flink:hover{color:#fff;}
+  .foot-bottom{display:flex; justify-content:space-between; padding-top:24px; font-size:13px; color:rgba(248,245,240,0.45); flex-wrap:wrap; gap:10px;}
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- Mobile ---------- */
+  @media (max-width:900px){
+    .nav-links{display:none;}
+    .menu-toggle{display:flex;}
+    .hero .wrap{grid-template-columns:1fr; gap:40px;}
+    .hero{padding:48px 0 60px;}
+    .hero-photo{order:-1; max-width:320px; margin:0 auto; aspect-ratio:4/5;}
+    .hero h1{font-size:36px;}
+    .hero .wordmark .word-line{font-size:21px;}
+    .hero .wordmark .script{font-size:22px;}
+    .hero p.lede{font-size:17px; max-width:100%;}
+    .cards-4{grid-template-columns:1fr 1fr; gap:18px;}
+    .cards-5{grid-template-columns:1fr 1fr; gap:18px;}
+    .about .wrap{grid-template-columns:1fr;}
+    .about-photo{max-width:320px; margin:0 auto;}
+    .section{padding:64px 0;}
+    .section-head h2{font-size:29px;}
+    .service-row{grid-template-columns:1fr; gap:8px;}
+    .steps{grid-template-columns:1fr 1fr; gap:32px 20px;}
+    .step:nth-child(2)::after, .step:not(:last-child)::after{display:none;}
+    .foot-grid{grid-template-columns:1fr; gap:28px;}
+    .breathe .maybe-list{font-size:19px;}
+    .emdr h2{font-size:28px;}
+    .cta-band h2{font-size:27px;}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 20px;}
+    .cards-4{grid-template-columns:1fr;}
+    .cards-5{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr;}
+    .hero h1{font-size:31px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav wrap" style="padding-left:0; padding-right:0;">
+    <div class="wordmark sm">
+      <div>
+        <span class="word-line">Room</span> <span class="script">for</span> <span class="word-line">Thoughts</span>
+      </div>
+      <div class="divider"><span class="rule"></span>
+        <svg class="leaf-sprig" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21c-4-1-7-5-7-10 0-3 2-6 5-7 1 3 1 6 0 9 3-2 5-5 5-9 3 1 5 4 5 7 0 5-3 9-7 10 0-3 0-7-1-10-.5 3-.5 7 0 10z"/></svg>
+        <span class="rule"></span></div>
+      <span class="sub">Mental Health Counseling</span>
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#emdr">EMDR</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#contact" class="btn">Schedule a Consultation</a>
+      <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <div class="wordmark" style="width:fit-content; margin-bottom:32px;">
+        <div>
+          <span class="word-line">Room</span> <span class="script" style="font-size:34px;">for</span> <span class="word-line">Thoughts</span>
+        </div>
+        <div class="divider"><span class="rule"></span>
+          <svg class="leaf-sprig" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21c-4-1-7-5-7-10 0-3 2-6 5-7 1 3 1 6 0 9 3-2 5-5 5-9 3 1 5 4 5 7 0 5-3 9-7 10 0-3 0-7-1-10-.5 3-.5 7 0 10z"/></svg>
+          <span class="rule"></span></div>
+        <span class="sub">Mental Health Counseling</span>
+      </div>
+      <h1>There's room<br>for <em>all of it.</em></h1>
+      <p class="lede">Therapy for teens, young adults, and women navigating anxiety, trauma, stress, and life's transitions.</p>
+      <a href="#contact" class="btn">Schedule a Consultation</a>
+      <p class="fine">Serving clients throughout New York via in-person and telehealth therapy, as well as telehealth for Florida.</p>
+    </div>
+    <div class="hero-photo">
+      <div class="hero-blob"></div>
+      <div class="photo-placeholder">Professional headshot<br>photo goes here</div>
+    </div>
+  </div>
+</section>
+
+<!-- BREATHING ROOM SECTION -->
+<section class="breathe reveal">
+  <div class="wrap">
+    <div class="maybe-list">
+      <span><em>Maybe</em> you're overwhelmed.</span>
+      <span><em>Maybe</em> your thoughts won't slow down.</span>
+      <span><em>Maybe</em> you're carrying something from the past that still feels heavy.</span>
+      <span><em>Maybe</em> you're exhausted from trying to be everything for everyone.</span>
+      <span>Or maybe you simply know that something needs to change.</span>
+    </div>
+    <p class="close-line">Therapy can be a space to slow down, make sense of what's happening, and begin moving forward. That's what Room for Thoughts is here for.</p>
+    <a href="#services" class="btn ghost">Learn More About Therapy</a>
+  </div>
+</section>
+
+<!-- WHO I HELP -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Who I help</div>
+      <h2>A space built for where you are right now.</h2>
+    </div>
+    <div class="cards-4 cards-5">
+      <div class="card">
+        <div class="dot">🌱</div>
+        <h3>Teens</h3>
+        <p>A safe, supportive space to navigate anxiety, friendships, school pressure, self-esteem, family changes, and the challenges of growing up.</p>
+      </div>
+      <div class="card">
+        <div class="dot">🌿</div>
+        <h3>Young Adults</h3>
+        <p>Support through college, relationships, career decisions, independence, identity, and the pressure to have life figured out.</p>
+      </div>
+      <div class="card">
+        <div class="dot">🤍</div>
+        <h3>Women &amp; Moms</h3>
+        <p>A space for women who spend so much time caring for everyone else that they have lost sight of themselves.</p>
+      </div>
+      <div class="card">
+        <div class="dot">👪</div>
+        <h3>Parenting</h3>
+        <p>Support for the pressures of parenting — navigating overwhelm, big feelings (yours and theirs), and figuring out who you are outside of the role.</p>
+      </div>
+      <div class="card">
+        <div class="dot">✦</div>
+        <h3>Trauma &amp; EMDR</h3>
+        <p>Evidence-based trauma therapy to help you process difficult experiences and move toward feeling more grounded and present.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / WHY -->
+<section class="section about reveal" id="about">
+  <div class="wrap">
+    <div class="about-photo">
+      <div class="photo-placeholder">About photo<br>goes here</div>
+      <svg viewBox="0 0 240 240" class="about-badge" role="img" aria-label="Room for Thoughts circular badge logo">
+        <defs>
+          <path id="topArcRFT" d="M 30,120 A 90,90 0 0,1 210,120" />
+          <path id="bottomArcRFT" d="M 30,120 A 90,90 0 0,0 210,120" />
+        </defs>
+        <circle cx="120" cy="120" r="108" fill="none" stroke="#A69287" stroke-width="1" opacity="0.6"/>
+        <circle cx="120" cy="120" r="100" fill="none" stroke="#A69287" stroke-width="1" opacity="0.6"/>
+        <circle cx="30" cy="120" r="2.4" fill="#30302E" opacity="0.6"/>
+        <circle cx="210" cy="120" r="2.4" fill="#30302E" opacity="0.6"/>
+        <text font-family="'Work Sans', sans-serif" font-size="13.5" font-weight="600" letter-spacing="2.6" fill="#30302E">
+          <textPath href="#topArcRFT" startOffset="50%" text-anchor="middle">ROOM FOR THOUGHTS</textPath>
+        </text>
+        <text font-family="'Work Sans', sans-serif" font-size="12" font-weight="600" letter-spacing="2.2" fill="#30302E">
+          <textPath href="#bottomArcRFT" startOffset="50%" text-anchor="middle">MENTAL HEALTH COUNSELING</textPath>
+        </text>
+        <g transform="translate(120,120) scale(1.9)">
+          <path d="M0,17c-4,-1 -7,-5 -7,-10c0,-3 2,-6 5,-7c1,3 1,6 0,9c3,-2 5,-5 5,-9c3,1 5,4 5,7c0,5 -3,9 -7,10c0,-3 0,-7 -1,-10c-0.5,3 -0.5,7 0,10z"
+                transform="translate(0,-9)" fill="#82826E"/>
+        </g>
+      </svg>
+    </div>
+    <div>
+      <div class="eyebrow">Meet your therapist</div>
+      <h2>Hi, I'm Lauren.</h2>
+      <div class="credential">Licensed Mental Health Counselor + EMDR Certified Therapist</div>
+      <p>I believe therapy should feel like a place where you can finally exhale.</p>
+      <p>My approach is warm, collaborative, and individualized. I don't believe therapy is about telling you what you should do. It's about creating a space where you can better understand yourself, process what you've been through, and develop the tools to move forward.</p>
+      <p>Whether you're struggling with anxiety, navigating a major life transition, feeling overwhelmed by the demands of everyday life, or working through past experiences, we'll work together to understand what's underneath the surface and find a path forward.</p>
+      <a href="#contact" class="btn ghost">Meet Lauren</a>
+    </div>
+  </div>
+</section>
+
+<!-- EMDR -->
+<section class="section emdr reveal" id="emdr">
+  <div class="wrap">
+    <div class="eyebrow">A path forward</div>
+    <h2>Sometimes understanding isn't enough.</h2>
+    <div class="lines">
+      <div>You can understand why you feel anxious.</div>
+      <div>You can talk about what happened.</div>
+      <div>You can know that something wasn't your fault.</div>
+      <div>And still feel stuck.</div>
+      <div class="final">EMDR can help.</div>
+    </div>
+    <p class="desc">EMDR (Eye Movement Desensitization and Reprocessing) is an evidence-based approach that can help the brain process distressing experiences so they feel less overwhelming in the present.</p>
+    <a href="#contact" class="btn">Learn About EMDR</a>
+  </div>
+</section>
+
+<!-- WHAT THERAPY FEELS LIKE -->
+<section class="section feels reveal">
+  <div class="wrap">
+    <div class="section-head" style="margin:0 auto 56px; text-align:center;">
+      <div class="eyebrow">In the room together</div>
+      <h2>What therapy with me feels like.</h2>
+      <p style="color:var(--charcoal-soft); margin-top:14px; font-size:16.5px;">Therapy should feel like a space where you can be yourself.</p>
+    </div>
+    <div class="cards-4">
+      <div class="card">
+        <span class="glyph">🤍</span>
+        <h3>Warm</h3>
+        <p>You don't have to worry about being judged.</p>
+      </div>
+      <div class="card">
+        <span class="glyph">🌿</span>
+        <h3>Collaborative</h3>
+        <p>We're working together — not me telling you what to do.</p>
+      </div>
+      <div class="card">
+        <span class="glyph">💬</span>
+        <h3>Honest</h3>
+        <p>We'll talk about what's really happening, even when it's uncomfortable.</p>
+      </div>
+      <div class="card">
+        <span class="glyph">🧠</span>
+        <h3>Evidence-Based</h3>
+        <p>Your treatment will be grounded in approaches supported by research and tailored to your individual needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section reveal" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Services</div>
+      <h2>How I can help.</h2>
+    </div>
+    <div class="services-list">
+      <div class="service-row">
+        <h3>Anxiety &amp; Overthinking</h3>
+        <p>Learn to manage racing thoughts, worry, perfectionism, and the physical effects of anxiety.</p>
+      </div>
+      <div class="service-row">
+        <h3>Trauma &amp; EMDR</h3>
+        <p>Process experiences that continue to affect how you feel, think, and respond today.</p>
+      </div>
+      <div class="service-row">
+        <h3>Life Transitions</h3>
+        <p>Navigate changes in relationships, school, career, identity, motherhood, and other major life transitions.</p>
+      </div>
+      <div class="service-row">
+        <h3>Teen &amp; Young Adult Therapy</h3>
+        <p>A supportive space to work through anxiety, self-esteem, relationships, school, family dynamics, and growing independence.</p>
+      </div>
+      <div class="service-row">
+        <h3>Women's Mental Health</h3>
+        <p>Support for women navigating burnout, overwhelm, identity, relationships, motherhood, and the pressure to do it all.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO EXPECT -->
+<section class="section expect reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Getting started</div>
+      <h2>Starting therapy can feel intimidating. It doesn't have to.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="num">01 — Reach out</span>
+        <p>Complete the contact form or schedule a consultation.</p>
+      </div>
+      <div class="step">
+        <span class="num">02 — Let's talk</span>
+        <p>We'll have an initial conversation about what's bringing you to therapy and what you're looking for.</p>
+      </div>
+      <div class="step">
+        <span class="num">03 — Find your fit</span>
+        <p>We'll determine whether my approach feels like a good fit for your needs.</p>
+      </div>
+      <div class="step">
+        <span class="num">04 — Begin</span>
+        <p>We'll create a treatment plan together and begin working toward your goals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section reveal" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Questions</div>
+      <h2>Frequently asked questions.</h2>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q"><span>Do you offer telehealth?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p>Yes — I offer telehealth sessions to clients located anywhere in New York, as well as in-person sessions.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Do you accept insurance?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p>[Add your insurance / private pay / superbill details here.]</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>What is EMDR?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p>EMDR (Eye Movement Desensitization and Reprocessing) is an evidence-based approach that helps the brain process distressing experiences so they feel less overwhelming in the present.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>How do I know if therapy is right for me?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p>If you're feeling overwhelmed, stuck, or like something needs to change, that's often enough of a reason to reach out. A consultation call can help you decide.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Do you offer a consultation before scheduling?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p>Yes — a brief consultation call is a great first step before booking a full session.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band reveal" id="contact">
+  <div class="wrap">
+    <h2>You don't have to figure it all out alone.</h2>
+    <p>Taking the first step can feel difficult — but you don't have to know exactly what you need before reaching out.</p>
+    <a href="#" class="btn">Schedule a Consultation</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="wordmark on-dark sm" style="margin-bottom:18px;">
+          <div>
+            <span class="word-line">Room</span> <span class="script">for</span> <span class="word-line">Thoughts</span>
+          </div>
+          <div class="divider"><span class="rule"></span>
+            <svg class="leaf-sprig" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21c-4-1-7-5-7-10 0-3 2-6 5-7 1 3 1 6 0 9 3-2 5-5 5-9 3 1 5 4 5 7 0 5-3 9-7 10 0-3 0-7-1-10-.5 3-.5 7 0 10z"/></svg>
+            <span class="rule"></span></div>
+          <span class="sub">Mental Health Counseling</span>
+        </div>
+        <p class="muted">Lauren [Last Name], LMHC<br>
+        EMDR Certified Therapist<br><br>
+        Westchester, NY<br>
+        Telehealth throughout New York</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <a class="flink" href="#home">Home</a>
+        <a class="flink" href="#about">About</a>
+        <a class="flink" href="#services">Services</a>
+        <a class="flink" href="#emdr">EMDR</a>
+        <a class="flink" href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a class="flink" href="#contact">Schedule a Consultation</a>
+        <a class="flink" href="mailto:hello@roomforthoughts.com">hello@roomforthoughts.com</a>
+        <a class="flink" href="#">Privacy Policy</a>
+        <a class="flink" href="#">Notice of Privacy Practices</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Room for Thoughts Mental Health Counseling. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle -> simple show/hide of nav links as a dropdown
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const isOpen = navLinks.style.display === 'flex';
+    if(isOpen){
+      navLinks.style.display = 'none';
+    } else {
+      navLinks.style.cssText = 'display:flex; position:absolute; top:100%; left:0; right:0; flex-direction:column; background:#F7F4EF; padding:20px 32px; gap:18px; border-bottom:1px solid rgba(168,154,141,0.4);';
+    }
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o=>{
+        if(o!==item){ o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight = null; }
+      });
+      if(isOpen){
+        item.classList.remove('open');
+        a.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); observer.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
