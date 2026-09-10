@@ -313,8 +313,10 @@
     .hero-photo{max-width:320px; margin:0 auto; aspect-ratio:4/5;}
     .masthead{display:block; background:var(--ivory); padding:24px 20px 20px; text-align:center;}
     .masthead img{width:100%; height:auto; max-width:330px; margin:0 auto;}
-    .brand-logo .lockup{display:none;}
-    .brand-logo .mark{display:block; height:40px;}
+    /* Masthead above carries the brand on mobile; a second small mark here
+       just crowds it. Hide it and right-align the remaining controls. */
+    .brand-logo{display:none;}
+    .nav{justify-content:flex-end;}
     .foot-logo img{height:54px;}
     .hero-copy-area{text-align:left;}
     .hero h1{font-size:36px;}
@@ -341,7 +343,6 @@
     .cards-5{grid-template-columns:1fr;}
     .steps{grid-template-columns:1fr;}
     .hero h1{font-size:31px;}
-    .brand-logo .mark{height:34px;}
     .masthead{padding:20px 20px 16px;}
     .masthead img{max-width:290px;}
     .nav{padding:12px 16px;}
